@@ -1,0 +1,16 @@
+Find the Decimal equivalent of binary.
+
+class Solution {
+    public int binary_to_decimal(String str) {
+        // Code here
+        char ch[] = str.toCharArray();
+        int result = 0;
+        for(int i=0; i<str.length(); i++){
+            if(ch[i]=='1'){
+                result += Math.pow(2,(str.length()-1-i));
+            }
+        }
+        
+        return result;
+    }
+}
