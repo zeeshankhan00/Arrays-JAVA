@@ -1,0 +1,17 @@
+class Solution{
+	void toBinary(int N) {
+		//Write your code here
+	    int bin[] = new int[32];
+	    int  i = 0;
+	    int a = N;
+	    while(a>0){
+	        int rem = a%2;
+	        bin[i] = rem;
+	        a = a/2;
+	        i++;
+	    }
+	    
+	    for(int j = i-1; j>=0; j--)
+	    System.out.print(bin[j]);
+	}
+}
