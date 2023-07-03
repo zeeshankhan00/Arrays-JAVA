@@ -1,0 +1,16 @@
+class Hanoi {
+    static long count =0;
+    public long toh(int N, int from, int to, int aux) {
+        // Your code here
+        if(N==0)
+        return count;
+        
+        toh(N-1, from, aux, to);
+        count++;
+        System.out.println("move disk "+N+" from rod "+from+ " to rod "+to);
+        toh(N-1, aux,to,from);
+        
+        return count;
+        
+    }
+}
