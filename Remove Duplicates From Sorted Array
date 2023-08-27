@@ -1,0 +1,24 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=0; i<nums.length; i++){
+            set.add(nums[i]);
+        }
+      
+      int arr[] = new int[set.size()];
+      int a = 0;
+      int ans = set.size();
+      for(int i=0; i<nums.length; i++){
+       if(set.contains(nums[i])) {
+           arr[a++] = nums[i];
+           set.remove(nums[i]);
+       }  
+      }
+
+      for(int i=0; i<ans; i++){
+          nums[i] = arr[i];
+      }
+       return ans;
+
+    }
+}
